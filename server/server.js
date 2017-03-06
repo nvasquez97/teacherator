@@ -18,5 +18,5 @@ app.listen(process.env.PORT || 7777, function () {
 });
 
 // Connect to mongodb database
-mongoose.connect("mongodb://localhost/reviewfinder");
+//mongoose.connect("mongodb://localhost/reviewfinder");
 //mongoose.connect("mongodb://nicbuitr:admin@ds119750.mlab.com:19750/heroku_42vhqtwt");
