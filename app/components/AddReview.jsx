@@ -12,6 +12,11 @@ module.exports = React.createClass({
           criteria_3:0,
           criteria_4:0,
           criteria_5:0,
+          criteria_1_desc:"",//Terminar de cuadrar esto para pasarlo por props
+          criteria_2_desc:"",
+          criteria_3_desc:"",
+          criteria_4_desc:"",
+          criteria_5_desc:"",
           totalScore:0,
           comments:""
       }  
@@ -50,7 +55,7 @@ module.exports = React.createClass({
         return(
           <div className="jumbotron">
             <div className="row text-center">
-              <h2> Add Review</h2>
+              <h2>Add Review By Choosing The Options That Apply</h2>
               <hr/>
               <img src="./img/0_star.png" className="inline-img-responsive rating-stars-img " id="stars-img" name="stars-img"/>
               <hr/>
