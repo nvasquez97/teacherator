@@ -1,7 +1,7 @@
 {
   "name": "reviewator",
   "description": "Application to rate reviews.",
-  "main": "index.js",
+  "main": "./server/server.js",
   "authors": [
     "Nicolas Buitrago"
   ],

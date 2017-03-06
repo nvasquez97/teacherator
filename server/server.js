@@ -13,10 +13,10 @@ app.use(express.static(path.join(__dirname, "../app/dist")));
 app.use(bodyParser.json())
 app.use("/api", reviewController);
 
-app.listen(process.env.PORT || 3000, function () {
-    console.log("Started listening on port", 3000);
+app.listen(process.env.PORT || 7777, function () {
+    console.log("Started listening on port", 7777);
 });
 
 // Connect to mongodb database
-//mongoose.connect("mongodb://localhost/reviewfinder");
+mongoose.connect("mongodb://localhost/reviewfinder");
 //mongoose.connect("mongodb://nicbuitr:admin@ds119750.mlab.com:19750/heroku_42vhqtwt");

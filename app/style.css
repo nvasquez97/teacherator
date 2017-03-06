@@ -2,8 +2,18 @@
 	font-family: Roboto;
 }
 
+body {
+	background: url(./img/blackboard_bg.jpg) round;
+	background-attachment: fixed; */
+}
+
 hr{
 	border-color: #676769;
+}
+
+.footer	{
+	text-align: center;
+    color: white;
 }
 
 .teacher-info {
@@ -13,7 +23,22 @@ hr{
 
 .teacher-profile-img {
     width: 15em;
-    max-width: 100%;
-    border-radius: 10px;
+    border-radius: 1em;
     border: thick groove snow;
+}
+
+.inline-img-responsive {
+    max-width: 100%;
+    display: inline;
+
+}
+
+.rating-stars-img {
+	width: 25em;
+}
+
+.criteria-checkbox {
+	width: 100%;
+    height: 21px;
+    float: right;
 }
