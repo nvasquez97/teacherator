@@ -1,7 +1,7 @@
 "use strict";
 var $ = require("jquery");
 var promise = require("es6-promise");
-var resourceUrl = "http://localhost:7777/api/reviews";
+var resourceUrl = "./api/reviews";
 
 module.exports = {
     addReview: function (review) {
