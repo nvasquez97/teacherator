@@ -7,23 +7,43 @@ var criteriaAmount = 5;
 module.exports = React.createClass({
     getInitialState:function(){
       return {
-          criteria_1:false,
-          criteria_2:false,
-          criteria_3:false,
-          criteria_4:false,
-          criteria_5:false,
+          criteria_1:0,
+          criteria_2:0,
+          criteria_3:0,
+          criteria_4:0,
+          criteria_5:0,
+          totalScore:0,
           comments:""
       }  
     },
     addReview:function(e){
         e.preventDefault();
+        this.state.totalScore = starCount;
         actions.addReview(this.state);
+
+        //Reinitialize for a new review
+        starCount = 0;
     },
     handleInputChange:function(e){
-      e.preventDefault();
       var name = e.target.name;
       var state = this.state;
-      state[name] = e.target.value;
+      var stateValue = 0;
+      
+      if(name === "comments"){
+        e.preventDefault();
+        stateValue = e.target.value;
+      }
+      else{
+        if (e.target.checked) {
+          starCount++;
+          stateValue = 1;
+        }
+        else{
+          starCount--;
+        }
+      }
+      document.getElementById("stars-img").src ="./img/"+starCount+"_star.png";
+      state[name] = stateValue;
       this.setState(state);
     },
     render:function(){
@@ -42,7 +62,7 @@ module.exports = React.createClass({
                     <label className="control-label" htmlFor="criteria_1">Criteria 1:</label>
                   </div>
                   <div className="col-md-6 text-right"> 
-                    <input type="checkbox" className="criteria-checkbox" id="criteria_1" name="criteria_1" checked={this.state.criteria_1} onChange={this.handleInputChange} />
+                    <input type="checkbox" className="criteria-checkbox" id="criteria_1" name="criteria_1" value={this.state.criteria_1} onChange={this.handleInputChange} />
                   </div>
                 </div>
               </div>
@@ -52,7 +72,7 @@ module.exports = React.createClass({
                     <label className="control-label" htmlFor="criteria_2">Criteria 2:</label>
                   </div>
                   <div className="col-md-6 text-right"> 
-                    <input type="checkbox" className="criteria-checkbox" id="criteria_2" name="criteria_2" checked={this.state.criteria_2} onChange={this.handleInputChange} />                    
+                    <input type="checkbox" className="criteria-checkbox" id="criteria_2" name="criteria_2" value={this.state.criteria_2} onChange={this.handleInputChange} />                    
                   </div>
                 </div>
               </div>
@@ -62,7 +82,7 @@ module.exports = React.createClass({
                     <label className="control-label" htmlFor="criteria_3">Criteria 3:</label>
                   </div>
                   <div className="col-md-6 text-right"> 
-                    <input type="checkbox" className="criteria-checkbox" id="criteria_3" name="criteria_3" checked={this.state.criteria_3} onChange={this.handleInputChange} />                    
+                    <input type="checkbox" className="criteria-checkbox" id="criteria_3" name="criteria_3" value={this.state.criteria_3} onChange={this.handleInputChange} />                    
                   </div>
                 </div>
               </div>
@@ -72,7 +92,7 @@ module.exports = React.createClass({
                     <label className="control-label" htmlFor="criteria_4">Criteria 4:</label>
                   </div>
                   <div className="col-md-6 text-right"> 
-                    <input type="checkbox" className="criteria-checkbox" id="criteria_4" name="criteria_4" checked={this.state.criteria_4} onChange={this.handleInputChange} />                    
+                    <input type="checkbox" className="criteria-checkbox" id="criteria_4" name="criteria_4" value={this.state.criteria_4} onChange={this.handleInputChange} />                    
                   </div>
                 </div>
               </div>
@@ -82,7 +102,7 @@ module.exports = React.createClass({
                     <label className="control-label" htmlFor="criteria_5">Criteria 5:</label>
                   </div>
                   <div className="col-md-6 text-right"> 
-                    <input type="checkbox" className="criteria-checkbox" id="criteria_5" name="criteria_5" checked={this.state.criteria_5} onChange={this.handleInputChange} />                    
+                    <input type="checkbox" className="criteria-checkbox" id="criteria_5" name="criteria_5" value={this.state.criteria_5} onChange={this.handleInputChange} />                    
                   </div>
                 </div>
               </div>

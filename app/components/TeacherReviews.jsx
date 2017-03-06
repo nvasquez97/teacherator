@@ -14,7 +14,7 @@ module.exports = React.createClass({
                 <div className="col-md-7">
                 <AddReview />
                     {
-                        this.props.reviews.map(function(s,index){
+                        this.props.reviews.reverse().map(function(s,index){
                             return(
                                 <ReviewInfo info={s} key={"review"+index} />
                             )         
