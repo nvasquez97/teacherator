@@ -13,7 +13,7 @@ module.exports = React.createClass({
             <div className="jumbotron teacher-info">
                 <div className="container">
                     <div className="row">
-                       <img src="./img/xavier.jpg" className="teacher-profile-img inline-img-responsive" />
+                       <img src="./img/xavier.png" className="teacher-profile-img inline-img-responsive" />
                         <h2>Charles Francis Xavier (Professor X) </h2>
                         <hr/>
                         <div className="container">
