@@ -62,3 +62,8 @@ hr{
 .comments {
 	background-color: rgba(33, 150, 243, 0.25);
 }
+
+.caption {
+	margin: -0.5em 0;
+    display: block;
+}
