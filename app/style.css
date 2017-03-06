@@ -1,0 +1,19 @@
+* {
+	font-family: Roboto;
+}
+
+hr{
+	border-color: #676769;
+}
+
+.teacher-info {
+	text-align: center;
+	padding: 2em 2em;
+}
+
+.teacher-profile-img {
+    width: 15em;
+    max-width: 100%;
+    border-radius: 10px;
+    border: thick groove snow;
+}

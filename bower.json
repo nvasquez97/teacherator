@@ -1,0 +1,19 @@
+{
+  "name": "reviewator",
+  "description": "Application to rate reviews.",
+  "main": "index.js",
+  "authors": [
+    "Nicolas Buitrago"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "app/lib"
+  ]
+}
