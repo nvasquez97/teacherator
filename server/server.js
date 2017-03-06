@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, "../app/dist")));
 app.use(bodyParser.json())
 app.use("/api", reviewController);
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("Started listening on port", 3000);
 });
 
