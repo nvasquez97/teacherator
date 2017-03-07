@@ -17,6 +17,9 @@ module.exports = React.createClass({
           criteria_3_desc:"",
           criteria_4_desc:"",
           criteria_5_desc:"",
+            /*Tener tantos "atributos" del estado parecidos le va a hacer mas dificil mantener el codigo, creo que se puede
+            manejar como un array y luego hacer render por cada objeto: 
+            http://stackoverflow.com/questions/32157286/rendering-react-components-from-array-of-objects*/ 
           totalScore:0,
           comments:""
       }  
@@ -28,6 +31,8 @@ module.exports = React.createClass({
 
         //Reinitialize for a new review
         starCount = 0;
+        
+        //Al reiniciar también debería tener en cuenta cada criterio para que se vuelva 0 de nuevo, haciendo uso de setState.
     },
     handleInputChange:function(e){
       var name = e.target.name;
@@ -45,6 +50,8 @@ module.exports = React.createClass({
         }
         else{
           starCount--;
+            /*revise si starCount ya es 0, pues cuando se ha hecho un review no se actualiza el estado
+            y hace peticiones de la imagen "-1_star..."*/
         }
       }
       document.getElementById("stars-img").src ="./img/"+starCount+"_star.png";
