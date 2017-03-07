@@ -17,6 +17,8 @@ module.exports = React.createClass({
                         this.props.reviews.reverse().map(function(s,index){
                             return(
                                 <ReviewInfo info={s} key={"review"+index} />
+                               /*Podría filtrar para que no le muestre todos los reviews, 
+                               ya que cuando son muchos no se ve esteticamente bien*/
                             )         
                         })
                     }
